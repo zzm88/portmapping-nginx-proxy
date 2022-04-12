@@ -1,0 +1,13 @@
+version: '3.7'
+# do some stuff
+
+services:
+  nginx:
+    build: ./nginx
+    
+    expose:
+      - "7979"
+      - "80"
+    environment:
+      - VIRTUAL_HOST= frps.musicscore.xyz
+ 
