@@ -1,6 +1,6 @@
 # portmapping-nginx-proxy
 
-say you have domain `domain.com` and you local app is serving on `frps.domain.com:7979` via frps+frpc. 
+say you have domain `domain.com` and your local app is serving on `frps.domain.com:7979` via frps+frpc. 
 Now you want to visit the website directly via `frps.domain.com(:80)` rather than via port `7979`. 
 This project can map `frps.domain.com(:80)` to `frps.domain.com:7979`.
 
@@ -37,3 +37,4 @@ let these two containers communicate with each other. note that the names of net
 ```
 docker network connect portmap_default nginx-proxy_nginx-proxy_1
 ```
+restart container so that nginx-proxy to update its config file automatically.
